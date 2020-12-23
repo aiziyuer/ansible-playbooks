@@ -1,0 +1,9 @@
+---
+
+- name: 1.1 ensures docker dirs
+  file: path={{ item }} state=directory
+  with_items:
+   - /etc/systemd/system
+   - /etc/docker
+   - /var/lib/docker
+
